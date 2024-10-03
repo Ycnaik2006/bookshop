@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Bookshop</title>
+    <style>
+        /* Basic styling for the home page */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #09a17b, #1254d8, #071199);
+            overflow-x: hidden;
+        }
+        /* Navbar styling */
+        .navbar {
+            background: linear-gradient(135deg, #062342, #19acd5, #08e7be);
+            padding: 15px 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #413b09;
+        }
+        .navbar .button {
+            background-color: #fff;
+            color: #007bff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .navbar .button:hover {
+            background-color: #e3e3e3;
+            transform: scale(1.05);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .book-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .book-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        .book-info {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .book-info h2 {
+            margin: 0 0 10px;
+            color: #333;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .book-info h2:hover {
+            color: #0befe0;
+        }
+        .book-info p {
+            margin: 0;
+            color: #666;
+            line-height: 1.5;
+        }
+        .book-actions {
+            display: flex;
+            flex-direction: column;
+        }
+        .book-actions button {
+            background: linear-gradient(135deg, #10b726, #038733, #025813);
+            border: none;
+            color: #fff;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .book-actions button:hover {
+            background-color: #b30900;
+            transform: translateY(-2px);
+        }
+        .book-cover {
+            width: 150px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .book-card:hover .book-cover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-links">
+            <a href="home.htm">Home</a>
+            <a href="suggest.htm" class="button">Suggest Your Books</a>
+        </div>
+        <button class="button" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="container">
+        <!-- Book 1 -->
+        <div class="book-card">
+            <img src="img/book1.jpg" alt="Book Cover 1" class="book-cover">
+            <div class="book-info">
+                <h2>The life of Shivaji Maharaj, founder of the Maratha empire</h2>
+                <p>Author:  N. S. TAKAKHAV, M. A., PROFESSOR, WILSON COLLEGE, BOMBAY</p>
+                <p>This books explain us history of Shivaji Maharaj in a very simpler and easy language considering all the authentic historical evidences. The said book is published by Maharashtra Rajya Sahitya & Sanskriti Mandal, Mumbai</p>
+            </div>
+            <div class="book-actions">
+                
+                <button onclick="window.location.href='https://www.rarebooksocietyofindia.org/book_archive/196174216674_10157035815231675.pdf'">Read Now</button>
+            </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card">
+            <img src="img/book2.jpg" alt="Book Cover 2" class="book-cover">
+            <div class="book-info">
+                <h2>The Ramayana of Valmiki</h2>
+                <p>Author: Valmiki,edited an translated by Manmatha NAth Dutt,M.A</p>
+                <p>The Ramayana of Valmiki. (English Prose Translation). Translated by Manmatha Nath Dutt.</p>
+            </div>
+            <div class="book-actions">
+                <button onclick="window.location.href='https://rarebooksocietyofindia.org/book_archive/196174216674_10156294128981675.pdf'">Download</button>
+                <button onclick="window.location.href='https://rarebooksocietyofindia.org/book_archive/196174216674_10156294128981675.pdf'">Read Now</button>
+            </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card">
+            <img src="img/book3.jpg" alt="Book Cover 3" class="book-cover">
+            <div class="book-info">
+                <h2>The Bhagavad-Gita, with the commentary of Sri Sankaracharya</h2>
+                <p>Author: WITH THE COMMENTARY OF SRI SANKARACHARYA ,TRANSLATED BY A. MAHADEVA SASTRI, b. a., Curator, Government Oriental Library, Mysore.</p>
+                <p>The Bhagavad-Gita, with the commentary of Sri Sankaracharya
+                    Translated into English by A. Mahadeva Sastri
+                    Published by G. T. A. Printing Works, Mysore - 1901.</p>
+            </div>
+            <div class="book-actions">
+                <button onclick="window.location.href='http://bit.ly/1CNAsrz'">Download</button>
+                <button onclick="window.location.href='http://bit.ly/1AKRIuY'">Read Now</button>
+            </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="book-card">
+            <img src="img/book4.JPG" alt="Book Cover 4" class="book-cover">
+            <div class="book-info">
+                <h2>History Of The Jagannath Temple</h2>
+                <p>Author: Sir Hans Singer</p>
+                <p>History Of The Jagannath Temple By Sir Hans Singer First published by A.N.Dwivedi in 1958.</p>
+            </div>
+            <div class="book-actions">
+                <button onclick="window.location.href='http://bit.ly/2s9TA3q'">Download</button>
+                <button onclick="window.location.href='http://bit.ly/2s4Zx6s'">Read Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            // Implement your logout logic here
+            alert("You have been logged out.");
+            window.location.href = 'index.htm'; // Redirect to login page or any other page
+        }
+    </script>
+</body>
+</html>
